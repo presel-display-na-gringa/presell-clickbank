@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#f7faf9"/>
+  <rect x="40" y="40" width="820" height="520" rx="28" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
+  <circle cx="450" cy="250" r="90" fill="#176b4d" opacity="0.15"/>
+  <text x="450" y="275" text-anchor="middle" font-family="Arial" font-size="34" fill="#176b4d" font-weight="700">Imagem do Produto</text>
+  <text x="450" y="325" text-anchor="middle" font-family="Arial" font-size="22" fill="#5f6c7b">Substitua depois pela imagem oficial</text>
+</svg>
