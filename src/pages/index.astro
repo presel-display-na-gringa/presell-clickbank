@@ -162,54 +162,59 @@
       Parte modificada para remover linha tracejada, outline e borda de foco.
     */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 15px 24px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 800;
-      transition: 0.2s ease;
-      cursor: pointer;
-      border: 0 !important;
-      outline: none !important;
-      text-align: center;
-      -webkit-tap-highlight-color: transparent;
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 15px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
 
-    .btn,
-    .btn:focus,
-    .btn:focus-visible,
-    .btn:active,
-    .btn:hover {
-      outline: none !important;
-      text-decoration: none !important;
-    }
+.btn,
+.btn:focus,
+.btn:focus-visible,
+.btn:active,
+.btn:hover {
+  outline: none !important;
+  text-decoration: none !important;
+}
 
-    .btn::-moz-focus-inner {
-      border: 0 !important;
-    }
+.btn::-moz-focus-inner {
+  border: 0 !important;
+}
 
-    .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-      box-shadow: 0 12px 24px rgba(31, 122, 92, 0.22);
-    }
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  box-shadow: 0 12px 24px rgba(31, 122, 92, 0.22);
+}
 
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-    }
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
 
-    .btn-secondary {
-      background: #ffffff;
-      color: var(--primary);
-      border: 0 !important;
-    }
+.btn-secondary {
+  background: #ecfdf3;
+  color: var(--primary);
+  border: 1px solid #abefc6;
+  box-shadow: none;
+}
 
-    .btn-secondary:hover {
-      background: #f0fdf4;
+.btn-secondary:hover {
+  background: #d1fadf;
+  border-color: #75e0a7;
+}
+
     }
 
     .cta-note {
