@@ -157,6 +157,10 @@
       margin-top: 22px;
     }
 
+    /*
+      BOTÕES
+      Parte modificada para remover linha tracejada, outline e borda de foco.
+    */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -168,18 +172,24 @@
       font-weight: 800;
       transition: 0.2s ease;
       cursor: pointer;
-      border: none;
+      border: 0 !important;
+      outline: none !important;
       text-align: center;
+      -webkit-tap-highlight-color: transparent;
     }
-.btn:focus,
-.btn:focus-visible,
-.btn:active {
-  outline: none;
-}
 
-.btn::-moz-focus-inner {
-  border: 0;
-}
+    .btn,
+    .btn:focus,
+    .btn:focus-visible,
+    .btn:active,
+    .btn:hover {
+      outline: none !important;
+      text-decoration: none !important;
+    }
+
+    .btn::-moz-focus-inner {
+      border: 0 !important;
+    }
 
     .btn-primary {
       background: var(--primary);
@@ -195,7 +205,7 @@
     .btn-secondary {
       background: #ffffff;
       color: var(--primary);
-      border: 1px solid #b7e4d2;
+      border: 0 !important;
     }
 
     .btn-secondary:hover {
