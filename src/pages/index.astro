@@ -927,45 +927,16 @@
     </a>
   </div>
 
-  <style is:global>
-  a.btn,
-  a.btn:link,
-  a.btn:visited,
-  a.btn:hover,
-  a.btn:active,
-  a.btn:focus,
-  a.btn:focus-visible {
-    text-decoration: none !important;
-  }
-
-  a.btn:focus,
-  a.btn:focus-visible,
-  a.btn:active,
-  a.btn:-webkit-any-link:focus-visible {
-    outline: none !important;
-    outline-width: 0 !important;
-    outline-style: none !important;
-    outline-color: transparent !important;
-  }
-
-  a.btn::-moz-focus-inner {
-    border: 0 !important;
-  }
-</style>
-
-<script>
+  <script>
   const affiliateLinks = document.querySelectorAll('a[href="https://YOUR-AFFILIATE-LINK-HERE.com"]');
 
   affiliateLinks.forEach(function(link) {
     link.addEventListener("click", function() {
       console.log("Affiliate link clicked");
-      link.blur();
-    });
-  });
 
-  document.querySelectorAll('a.btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      btn.blur();
+      setTimeout(function() {
+        link.blur();
+      }, 100);
     });
   });
 </script>
