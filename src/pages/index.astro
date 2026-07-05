@@ -86,7 +86,9 @@
   </div>
 </header>
 
-<img src="/assets/images/healthy-couple-jogging.webp" alt="Healthy couple jogging outdoors" class="full-width-img" />
+<div class="full-width-img-wrap">
+  <img src="/assets/images/healthy-couple-jogging.webp" alt="Healthy couple jogging outdoors" class="full-width-img" />
+</div>
 
 <main>
   <div class="container-with-sidebar">
@@ -102,7 +104,9 @@
       <p>A common mistake in navigating weight loss is jumping into extreme routines all at once. Many people combine multiple habits at the same time — trying every fad diet, energy drink, syrup, and long fasting periods — instead of building consistency.</p>
       <p>This is why a growing number of consumers are looking for simple, sustainable habits that can be easily followed and are designed to support overall wellness, rather than promising fast results without a real foundation.</p>
 
-      <img src="/assets/images/man-jogging.webp" alt="Man jogging outdoors" class="content-img" />
+      <div class="content-img-wrap">
+        <img src="/assets/images/man-jogging.webp" alt="Man jogging outdoors" class="content-img" />
+      </div>
 
       <h2>Why Extreme Diets Often Fall Short</h2>
       <p>Very restrictive diets can create major changes that are challenging to maintain after just a few days or weeks. When a routine feels too extreme, motivation can drop quickly, and the results are often hard to sustain.</p>
@@ -128,7 +132,9 @@
         </div>
       </div>
 
-      <img src="/assets/images/woman-wellness-drink.webp" alt="Woman preparing wellness drink in kitchen" class="content-img" onerror="this.src='/assets/images/natural-ingredients.webp'" />
+      <div class="content-img-wrap">
+        <img src="/assets/images/woman-wellness-drink.webp" alt="Woman preparing wellness drink in kitchen" class="content-img" onerror="this.src='/assets/images/natural-ingredients.webp'" />
+      </div>
 
       <h2>What Should You Check Before Visiting the Official Website?</h2>
       <p>Before considering any wellness product, it is important to review a few key points. This helps you avoid confusion and make a more informed decision.</p>
@@ -144,7 +150,9 @@
       <p>Many consumers prefer products that combine natural ingredients and are simple to use. For this reason, it is important to review the official ingredient list and understand how the product is intended to be used.</p>
       <p>A natural positioning does not mean a product is right for everyone. That is why responsible consumers should always read the label, follow the directions, and check with a healthcare professional if they have any questions.</p>
 
-      <img src="/assets/images/natural-ingredients.webp" alt="Natural ingredients including fruits and vegetables" class="content-img" />
+      <div class="content-img-wrap">
+        <img src="/assets/images/natural-ingredients.webp" alt="Natural ingredients including fruits and vegetables" class="content-img" />
+      </div>
 
       <div class="info-callout">
         <h3>Want To See The Current Options?</h3>
@@ -385,6 +393,7 @@
 
   .cta-row { margin: 16px 0 6px; }
 
+  /* ===== BOTÕES: removido outline/borda tracejada vermelha do navegador ===== */
   .btn {
     display: inline-block;
     text-decoration: none;
@@ -395,8 +404,18 @@
     border-radius: 6px;
     text-align: center;
     transition: transform 0.15s ease;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
   .btn:hover { transform: translateY(-2px); }
+  .btn:focus,
+  .btn:focus-visible,
+  .btn:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
 
   .btn-primary { background: #d92b2b; color: #fff !important; }
   .btn-secondary { background: #1a3c34; color: #fff !important; }
@@ -415,20 +434,37 @@
   .hero-card h3 { font-size: 16px; }
   .hero-card p { font-size: 14px; }
 
-  .full-width-img {
+  /* ===== IMAGEM FULL WIDTH: sem cortar cabeças ===== */
+  .full-width-img-wrap {
     width: 100%;
     max-height: 500px;
+    overflow: hidden;
+  }
+  .full-width-img {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
     object-fit: cover;
+    object-position: center 20%;
     display: block;
   }
 
-  .content-img {
+  /* ===== IMAGENS DE CONTEÚDO: sem esmagar/cortar rostos ===== */
+  .content-img-wrap {
     width: 100%;
     max-height: 450px;
-    object-fit: cover;
-    display: block;
+    overflow: hidden;
     border-radius: 6px;
     margin: 24px 0;
+  }
+  .content-img {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #f5f5f5;
   }
 
   .container-with-sidebar {
@@ -525,7 +561,7 @@
     padding: 18px;
     text-align: center;
   }
-  .sidebar-card img { width: 100%; max-height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 12px; }
+  .sidebar-card img { width: 100%; max-height: 160px; object-fit: contain; background: #f5f5f5; border-radius: 6px; margin-bottom: 12px; }
   .sidebar-card h3 { font-size: 15px; }
   .sidebar-card p { font-size: 13px; }
 
