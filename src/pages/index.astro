@@ -14,7 +14,7 @@
   <meta name="robots" content="index, follow" />
 
 <!-- ================ META PIXEL (FACEBOOK) ================ -->
-<script type="module">
+<script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -29,7 +29,7 @@ fbq('track', 'PageView');
 
 <!-- ================ GOOGLE ANALYTICS GA4 ================ -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script type="module">
+<script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -38,7 +38,7 @@ gtag('config', 'G-XXXXXXXXXX');
 
 <!-- ================ GOOGLE ADS ================ -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-<script type="module">
+<script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -191,60 +191,58 @@ gtag('config', 'AW-XXXXXXXXXX');
 
     /*
       BOTÕES
-      Parte modificada para remover linha tracejada, outline e borda de foco.
+      Sem linha tracejada, outline ou borda de foco.
     */
     .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 15px 24px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 800;
-  transition: 0.2s ease;
-  cursor: pointer;
-  text-align: center;
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 15px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: 0.2s ease;
+      cursor: pointer;
+      text-align: center;
+      outline: none !important;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-.btn,
-.btn:focus,
-.btn:focus-visible,
-.btn:active {
-  outline: none !important;
-}
+    .btn,
+    .btn:focus,
+    .btn:focus-visible,
+    .btn:active {
+      outline: none !important;
+    }
 
-.btn::-moz-focus-inner {
-  border: 0 !important;
-}
+    .btn::-moz-focus-inner {
+      border: 0 !important;
+    }
 
-.btn-primary {
-  background: var(--primary);
-  color: #ffffff;
-  border: 1px solid var(--primary);
-  box-shadow: 0 12px 24px rgba(31, 122, 92, 0.22);
-}
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border: 1px solid var(--primary);
+      box-shadow: 0 12px 24px rgba(31, 122, 92, 0.22);
+    }
 
-.btn-primary:hover {
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
-  transform: translateY(-1px);
-}
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-1px);
+    }
 
-.btn-secondary {
-  background: #ecfdf3;
-  color: var(--primary);
-  border: 1px solid #abefc6;
-  box-shadow: none;
-}
+    .btn-secondary {
+      background: #ecfdf3;
+      color: var(--primary);
+      border: 1px solid #abefc6;
+      box-shadow: none;
+    }
 
-.btn-secondary:hover {
-  background: #d1fadf;
-  border-color: #75e0a7;
-}
-
+    .btn-secondary:hover {
+      background: #d1fadf;
+      border-color: #75e0a7;
     }
 
     .cta-note {
@@ -960,18 +958,17 @@ gtag('config', 'AW-XXXXXXXXXX');
   </div>
 
   <script>
-  const affiliateLinks = document.querySelectorAll('a[href="https://YOUR-AFFILIATE-LINK-HERE.com"]');
+    const affiliateLinks = document.querySelectorAll('a[href="https://YOUR-AFFILIATE-LINK-HERE.com"]');
 
-  affiliateLinks.forEach(function(link) {
-    link.addEventListener("click", function() {
-      console.log("Affiliate link clicked");
+    affiliateLinks.forEach(function(link) {
+      link.addEventListener("click", function() {
+        console.log("Affiliate link clicked");
 
-      setTimeout(function() {
-        link.blur();
-      }, 100);
+        setTimeout(function() {
+          link.blur();
+        }, 100);
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
